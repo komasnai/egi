@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KOMSAN AI - برومتات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FDF0D5;font-family:'Cairo',sans-serif;color:#1A1A1A}
+.topbar{background:#C94A32;color:white;text-align:center;padding:8px;font-size:12px;letter-spacing:1px}
+.header{display:flex;justify-content:center;align-items:center;padding:22px;gap:12px;border-bottom:1px solid #E8DCC0}
+.logo{font-weight:800;font-size:26px}
+.container{max-width:1100px;margin:0 auto;padding:40px 20px}
+.h1{font-size:64px;font-weight:800;color:#C94A32;margin:0;line-height:0.9}
+.sub{color:#7A6A50;margin-top:8px;font-size:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px}
+@media(max-width:768px){.grid{grid-template-columns:1fr}.h1{font-size:40px}}
+.card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.06);transition:transform .2s}
+.card:hover{transform:translateY(-4px)}
+.card img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+.prompt-box{background:#1A1A1A;color:#FDF0D5;padding:20px 18px 18px;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.7;position:relative;white-space:pre-wrap}
+.copy{position:absolute;top:10px;left:10px;background:#FDF0D5;color:#1A1A1A;border:none;padding:6px 14px;border-radius:20px;font-size:11px;cursor:pointer;font-family:'Cairo',sans-serif;font-weight:700}
+.tag{display:inline-block;background:#FDE8C6;color:#C94A32;padding:4px 10px;border-radius:20px;font-size:11px;margin:6px 4px}
+.footer{text-align:center;padding:40px;color:#9A8A70;font-size:12px;border-top:1px solid #E8DCC0;margin-top:60px}
+</style>
+</head>
+<body>
+<div class="topbar">KOMSAN AI • PROMPTS LIBRARY • 4 PROMPTS READY TO COPY</div>
+<div class="header"><div class="logo">KOMSAN AI — برومتات</div></div>
+<div class="container">
+<h1 class="h1">برومتات</h1>
+<div class="sub">مكتبة برومتات جاهزة - 4 برومتات - دوس نسخ واستخدمه على طول</div>
+<div class="grid">
+
+<div class="card">
+<img src="prompt-1.jpg" alt="Prompt 01">
+<div class="prompt-box"><button class="copy" onclick="copyPrompt(this)">نسخ</button>Photorealistic portrait of a young Egyptian man with curly hair and beard, wearing transparent clear glasses, black chunky knit sweater with bold white text 'RAREBOY', silver R pendant necklace, studio lighting, solid cobalt blue background, 85mm lens, ultra realistic, 8K --ar 4:5</div>
+<div style="padding:12px"><span class="tag">#prompt</span><span class="tag">#ai</span><span class="tag">PROMPT 01</span></div>
+</div>
+
+<div class="card">
+<img src="prompt-2.jpg" alt="Prompt 02">
+<div class="prompt-box"><button class="copy" onclick="copyPrompt(this)">نسخ</button>A young man standing at night in city, wearing light gray windbreaker over white t-shirt, holding red smartphone, looking down, motion blur train background with teal and orange light trails, cinematic bokeh, shallow depth of field, ultra realistic photography --ar 4:5</div>
+<div style="padding:12px"><span class="tag">#prompt</span><span class="tag">#ai</span><span class="tag">PROMPT 02</span></div>
+</div>
+
+<div class="card">
+<img src="prompt-3.jpg" alt="Prompt 03">
+<div class="prompt-box"><button class="copy" onclick="copyPrompt(this)">نسخ</button>Full body studio portrait, young man sitting on white chair, red smoky background with atmospheric haze, wearing white oversized Nike t-shirt, gray cargo shorts, red white black Air Jordan 1, dramatic red rim light, wet floor reflection, fashion editorial --ar 4:5</div>
+<div style="padding:12px"><span class="tag">#prompt</span><span class="tag">#ai</span><span class="tag">PROMPT 03</span></div>
+</div>
+
+<div class="card">
+<img src="prompt-4.jpg" alt="Prompt 04">
+<div class="prompt-box"><button class="copy" onclick="copyPrompt(this)">نسخ</button>Black and white profile portrait of a man with cornrow braids, wearing black sunglasses and denim jacket, double exposure motion blur effect trailing behind, studio lighting, Gabriel Morgado style, high contrast, artistic --ar 4:5 --style raw</div>
+<div style="padding:12px"><span class="tag">#prompt</span><span class="tag">#ai</span><span class="tag">PROMPT 04</span></div>
+</div>
+
+</div>
+<div class="footer">KOMSAN AI • @komsan.eg • WhatsApp 01273577156 — كل البرومتات جاهزة للنسخ</div>
+</div>
+<script>
+function copyPrompt(btn){
+  const box = btn.parentElement;
+  const text = box.innerText.replace('نسخ','').replace('تم النسخ!','').trim();
+  navigator.clipboard.writeText(text).then(()=>{
+    btn.innerText='تم النسخ!';
+    setTimeout(()=>btn.innerText='نسخ',1500);
+  });
+}
+</script>
+</body>
+</html>
